@@ -33,3 +33,7 @@ def search_posts_by_title(db: Session, keyword: str):
 
 def paginate_posts(db: Session, page: int = 1, per_page: int = 5):
     pass
+
+
+
+

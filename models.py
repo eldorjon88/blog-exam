@@ -28,3 +28,12 @@ class Comment(Base):
   
     user = relationship("User", back_populates="comments")
     post = relationship("Post", back_populates="comments")
+
+
+
+
+
+
+
+
+
