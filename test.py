@@ -13,11 +13,6 @@ print("User posts:", posts)
 
 # Qolgan function larni ham shu yerda test qiling
 
-
-
-
-
-
 post = crud.create_post(db, user.id, "My Post", "Hello Blog!")
 print("Created Post:", post.title)
 
