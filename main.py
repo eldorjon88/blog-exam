@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
 
 
-# main.py
+
 import json
 from database import Base, engine, SessionLocal
 from models import User, Post, Comment
