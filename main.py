@@ -37,17 +37,3 @@ if __name__ == "__main__":
     init_db()
     load_demo_data()
     print("✅ Database initialized and demo data loaded!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
