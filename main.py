@@ -13,14 +13,25 @@ def load_demo_data():
 
     # Users larni kriting
     db.commit()
+    for u in data.get("users", []):
+        crud.create_user(db, u["username"], u["email"])
+
 
     # Posts larni kriting
     db.commit()
+    for p in data.get("posts", []):
+        crud.create_post(db, p["user_id"], p["title"], p["body"])
+
 
     # Comments larni kriting
     db.commit()
+    for c in data.get("comments", []):
+        crud.create_comment(db, c["user_id"], c["post_id"], c["text"])
+
 
     db.close()
+
+
 
 if __name__ == "__main__":
     init_db()
@@ -38,19 +49,5 @@ if __name__ == "__main__":
 
 
 
-    for u in data.get("users", []):
-        crud.create_user(db, u["username"], u["email"])
-
-    for p in data.get("posts", []):
-        crud.create_post(db, p["user_id"], p["title"], p["body"])
-
-    for c in data.get("comments", []):
-        crud.create_comment(db, c["user_id"], c["post_id"], c["text"])
-
-    # db.close()
 
 
-# if __name__ == "__main__":
-#     init_db()
-#     load_demo_data()
-#     print("✅ Database initialized and demo data loaded!")
