@@ -26,7 +26,7 @@ def load_demo_data():
     # Comments larni kriting
     db.commit()
     for c in data.get("comments", []):
-        crud.create_comment(db, c["user_id"], c["post_id"], c["text"])
+        crud.create_commit(db, c["user_id"], c["title"], c["body"])
 
 
     db.close()
